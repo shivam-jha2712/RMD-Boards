@@ -479,7 +479,7 @@
                                 <i class="ri-arrow-right-s-line"></i>
                               </a>
                             </div>
-                            
+
                           </div>
                         </div>
 
@@ -600,16 +600,17 @@
             <div class="brochure-glass">
 
               <div class="brochure-button">
-                <a href="../assets/RMD Catalogue Nov 2023 FINAL.pdf" target="_blank">Catalog - 2023
-                </a>
-              </div>
-
-              <!-- <div class="brochure-button">
-                <a href="../assets/Brochure.pdf" target="_blank">Brochure - 2023
+                <a href="../assets/RMD Board Design Catalogue.pdf" target="_blank">RMD Board Design Catalogue - 2023</a>
                 </a>
               </div>
 
               <div class="brochure-button">
+                <a href="../assets/RMD Board Catalogue.pdf" target="_blank">
+                  RMD Board Catalogue - 2023
+                </a>
+              </div>
+
+              <!-- <div class="brochure-button">
                 <a href="../assets/Brochure.pdf" target="_blank">Brochure - 2023
                 </a>
               </div> -->
@@ -633,104 +634,104 @@
     <!-- Pop-up form -->
 
     <!-- Pop-up form -->
-    
+
     <div class="popup-overlay" id="popup" style="display: none;">
       <div class="popup-content">
         <span class="close-button" onclick="closePopup()">&times;</span>
         <h2 class="pop-up-heading">To Know More About Us</h2>
         <form name="submit-to-google-sheet-2" class="input-group">
-    
+
           <label for="name">Name*</label>
           <input type="text" id="name-contact" name="name" class="form-control" required placeholder="Enter your name">
-    
+
           <label for="email">Email*</label>
           <input id="newsletter-email" name="email" type="email" class="form-control" placeholder="Enter your email"
             required>
-    
+
           <label for="phone">Phone Number*</label>
           <input type="tel" id="phone-contact" name="phone" class="form-control" required
             placeholder="Enter your Number with Country Code">
-    
+
           <input type="submit" class="btn btn-primary" onclick="togglePopup()"></input>
         </form>
-    
-    
-    
-    
+
+
+
+
       </div>
     </div>
-        
-        
-        
-        <footer id="footer">
-          <div class="social-share">
-            <div class="container">
-              <div class="social-wrap"><span>Follow us on</span>
-                <ul>
-                  <li class="facebook">
-                    <a href="https://www.linkedin.com/company/rmd-board" target="_blank">facebook</a>
-                  </li>
-                  <li class="instagram">
-                    <a href="https://www.linkedin.com/company/rmd-board" target="_blank">instagram</a>
-                  </li>
-                  <li class="linkedin">
-                    <a href="https://www.linkedin.com/company/rmd-board" target="_blank">linkedin</a>
-                  </li>
-                  <!-- <li class="brochure">
+
+
+
+    <footer id="footer">
+      <div class="social-share">
+        <div class="container">
+          <div class="social-wrap"><span>Follow us on</span>
+            <ul>
+              <li class="facebook">
+                <a href="https://www.linkedin.com/company/rmd-board" target="_blank">facebook</a>
+              </li>
+              <li class="instagram">
+                <a href="https://www.linkedin.com/company/rmd-board" target="_blank">instagram</a>
+              </li>
+              <li class="linkedin">
+                <a href="https://www.linkedin.com/company/rmd-board" target="_blank">linkedin</a>
+              </li>
+              <!-- <li class="brochure">
                         <a href="#" id="open-popup-button">Download Brochure</a>
                       </li> -->
-        
-                </ul>
-              </div>
-            </div>
+
+            </ul>
           </div>
-        
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
-          </script>
-        
-          <script>
-            function togglePopup() {
-              let email = document.getElementById("newsletter-email").value;
-              let name = document.getElementById("name-contact").value;
-              let phone = document.getElementById("phone-contact").value;
-              let finalmessageforsubscribe = `  Name : ${name} <br>  Phone : ${phone} <br> Email : ${email} <br>  `;
+        </div>
+      </div>
 
-              Email.send({
-                SecureToken: "8dd54dc4-fb94-4a65-9902-296ddc3c1c97",
-                To: 'shivam.jha.2712@gmail.com',
-                From: "shivam.jha.2712@gmail.com",
-                Subject: "Someone Downloaded for the Brochure",
-                Body: finalmessageforsubscribe
-              }).then(
-                message => {
-                  if (message === 'OK') {
-                    swal("Great!", "You can Download the Resouces Now!", "success");
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+      </script>
 
-                    // Include the download link here
-                    let downloadLink = document.createElement('a');
-                    downloadLink.href = '/brochure/';
-                    downloadLink.target = '_blank';
-                    downloadLink.textContent = 'Download Brochure';
-                    downloadLink.id = 'open-popup-button';
+      <script>
+        function togglePopup() {
+          let email = document.getElementById("newsletter-email").value;
+          let name = document.getElementById("name-contact").value;
+          let phone = document.getElementById("phone-contact").value;
+          let finalmessageforsubscribe = `  Name : ${name} <br>  Phone : ${phone} <br> Email : ${email} <br>  `;
 
-                    // Append the link to the body
-                    document.body.appendChild(downloadLink);
+          Email.send({
+            SecureToken: "8dd54dc4-fb94-4a65-9902-296ddc3c1c97",
+            To: 'shivam.jha.2712@gmail.com',
+            From: "shivam.jha.2712@gmail.com",
+            Subject: "Someone Downloaded for the Brochure",
+            Body: finalmessageforsubscribe
+          }).then(
+            message => {
+              if (message === 'OK') {
+                swal("Great!", "You can Download the Resouces Now!", "success");
 
-                    // Trigger the download
-                    downloadLink.click();
+                // Include the download link here
+                let downloadLink = document.createElement('a');
+                downloadLink.href = '/brochure/';
+                downloadLink.target = '_blank';
+                downloadLink.textContent = 'Download Brochure';
+                downloadLink.id = 'open-popup-button';
 
-                    // Remove the link from the body
-                    document.body.removeChild(downloadLink);
+                // Append the link to the body
+                document.body.appendChild(downloadLink);
 
-                    // Reset the form
-                    document.getElementById("newsletter-email").value = "";
-                    document.getElementById("name-contact").value = "";
-                    document.getElementById("phone-contact").value = "";
-                  }
-                }
-              );
+                // Trigger the download
+                downloadLink.click();
+
+                // Remove the link from the body
+                document.body.removeChild(downloadLink);
+
+                // Reset the form
+                document.getElementById("newsletter-email").value = "";
+                document.getElementById("name-contact").value = "";
+                document.getElementById("phone-contact").value = "";
+              }
             }
-          </script>
+          );
+        }
+      </script>
 
       <!-- Footer Wala NewsLetter -->
       <script>
